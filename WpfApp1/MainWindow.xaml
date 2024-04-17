@@ -6,12 +6,25 @@
     	xmlns:local="clr-namespace:lab2"
     	mc:Ignorable="d"
     	Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Label Content="Label" HorizontalContentAlignment="Center"/>
-        <TextBox Text="TextBox" Height="20"/>
-        <TextBox Text="TextBox" Height="20"/>
-        <TextBox Text="TextBox" Height="20"/>
-        <TextBox Text="TextBox" Height="20"/>
-        <Button Content="Button" Margin="0,50,0,0" Width="300"/>
-    </StackPanel>
+    <WrapPanel>
+        <Label Content="Label" Width="97" />
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="87"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <Label Content="Label" Width="97" />
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="87"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <TextBox Text="TextBox" Width="88"/>
+        <Button Content="Button" Height="35" Width="76" Margin="350,0,0,0"/>
+    </WrapPanel>
 </Window>
