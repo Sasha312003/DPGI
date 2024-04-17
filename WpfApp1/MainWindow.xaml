@@ -6,11 +6,10 @@
     	xmlns:local="clr-namespace:lab2"
     	mc:Ignorable="d"
     	Title="MainWindow" Height="450" Width="800">
-    <DockPanel LastChildFill="False">
-        <TextBox DockPanel.Dock="Right" Height="321" Width="244">TextBox</TextBox>
-        <TextBox DockPanel.Dock="Left" Width="224" Height="321">TextBox</TextBox>
-        <Label Content="Label" DockPanel.Dock="Top" Height="91" HorizontalContentAlignment="Center"/>
-        <Button DockPanel.Dock="Bottom" Content="Button" Height="39" Margin="0,0,0,100" Width="140"/>
-    </DockPanel>
-</Window>
+    <Canvas>
+        <Label Canvas.Top="20" Canvas.Left ="20">Label</Label>
+        <TextBox Canvas.Top="40" Canvas.Left ="40">text</TextBox>
+        <Button Canvas.Top="60" Canvas.Left ="60">button</Button>
+    </Canvas>
 
+</Window>
