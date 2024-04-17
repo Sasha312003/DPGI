@@ -6,25 +6,11 @@
     	xmlns:local="clr-namespace:lab2"
     	mc:Ignorable="d"
     	Title="MainWindow" Height="450" Width="800">
-    <WrapPanel>
-        <Label Content="Label" Width="97" />
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="87"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <Label Content="Label" Width="97" />
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="87"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <TextBox Text="TextBox" Width="88"/>
-        <Button Content="Button" Height="35" Width="76" Margin="350,0,0,0"/>
-    </WrapPanel>
+    <DockPanel LastChildFill="False">
+        <TextBox DockPanel.Dock="Right" Height="321" Width="244">TextBox</TextBox>
+        <TextBox DockPanel.Dock="Left" Width="224" Height="321">TextBox</TextBox>
+        <Label Content="Label" DockPanel.Dock="Top" Height="91" HorizontalContentAlignment="Center"/>
+        <Button DockPanel.Dock="Bottom" Content="Button" Height="39" Margin="0,0,0,100" Width="140"/>
+    </DockPanel>
 </Window>
+
