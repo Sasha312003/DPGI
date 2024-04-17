@@ -6,23 +6,12 @@
     	xmlns:local="clr-namespace:lab2"
     	mc:Ignorable="d"
     	Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
-        <!-- Встановлюємо два рядки -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="4*"></RowDefinition>
-            <RowDefinition ></RowDefinition>
-        </Grid.RowDefinitions>
-        <!-- Встановлюємо три стовпці -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <!-- Розміщуємо елементи у сітці -->
-        <Label Grid.Row="0" Grid.Column="1">Label</Label>
-        <TextBox Grid.Row="1" Grid.ColumnSpan="3" >TextBox</TextBox>
-        <Button Grid.Row="2" Grid.Column="1">Button2</Button>
-    </Grid>
+    <StackPanel>
+        <Label Content="Label" HorizontalContentAlignment="Center"/>
+        <TextBox Text="TextBox" Height="20"/>
+        <TextBox Text="TextBox" Height="20"/>
+        <TextBox Text="TextBox" Height="20"/>
+        <TextBox Text="TextBox" Height="20"/>
+        <Button Content="Button" Margin="0,50,0,0" Width="300"/>
+    </StackPanel>
 </Window>
-
