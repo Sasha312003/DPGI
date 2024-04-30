@@ -94,5 +94,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\delete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\open.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\insert.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
