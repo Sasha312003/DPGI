@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="TextEditor" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Ресурс для градієнтної заливки -->
+        <LinearGradientBrush x:Key="LinearPanelBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Yellow" Offset="0"/>
+            <GradientStop Color="Blue" Offset="0.5"/>
+            <GradientStop Color="Yellow" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource LinearPanelBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <!-- Режим автоматичного визначення висоти -->
@@ -44,11 +53,15 @@
                 </Grid.RowDefinitions>
 
                 <!-- Текстовий елемент TextBox з вертикальною смугою прокрутку -->
-                <TextBox Grid.Row="0" VerticalScrollBarVisibility="Auto" />
+                <TextBox Grid.Row="0" VerticalScrollBarVisibility="Auto" FontSize="{Binding ElementName=fontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
-                <!-- Контейнер DockPanel для кнопки "ОК" -->
+                <!-- Контейнер DockPanel для кнопки "ОК" і Slider -->
                 <DockPanel Grid.Row="1" VerticalAlignment="Bottom">
-                    <Button Content="ОК" DockPanel.Dock="Bottom" Margin="0 10 0 0"/>
+                    <!-- Елемент Label для відображення підпису -->
+                    <Label Content="Розмір шрифту:" VerticalAlignment="Center"/>
+                    <!-- Елемент Slider -->
+                    <Slider Name="fontSlider" Margin="4" MinWidth="100" Maximum="100" Minimum="12" Width="327"/>
+                    <Button Content="ОК" Margin="0 10 0 0" Width="54"/>
                 </DockPanel>
             </Grid>
         </Border>
