@@ -26,16 +26,16 @@
         <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
             <!-- StackPanel з кнопками -->
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Button>
+                <Button  ToolTip="Відкрити" Command="Open">
                     <Image Source="/images/open.jpg"/>
                 </Button>
-                <Button>
+                <Button  ToolTip="Стерти" Command="Delete">
                     <Image Source="/images/delete.jpg" Width="130.56"/>
                 </Button>
-                <Button>
+                <Button ToolTip="Копіювати" Command="Copy">
                     <Image Source="/images/copy.jpg" Width="130.56"/>
                 </Button>
-                <Button>
+                <Button ToolTip="Вставити" Command="Paste">
                     <Image Source="/images/insert.jpg" Width="130.56"/>
                 </Button>
             </StackPanel>
@@ -53,7 +53,7 @@
                 </Grid.RowDefinitions>
 
                 <!-- Текстовий елемент TextBox з вертикальною смугою прокрутку -->
-                <TextBox Grid.Row="0" VerticalScrollBarVisibility="Auto" FontSize="{Binding ElementName=fontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Name="inputTextBox" Grid.Row="0" VerticalScrollBarVisibility="Auto" FontSize="{Binding ElementName=fontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <!-- Контейнер DockPanel для кнопки "ОК" і Slider -->
                 <DockPanel Grid.Row="1" VerticalAlignment="Bottom">
@@ -61,7 +61,7 @@
                     <Label Content="Розмір шрифту:" VerticalAlignment="Center"/>
                     <!-- Елемент Slider -->
                     <Slider Name="fontSlider" Margin="4" MinWidth="100" Maximum="100" Minimum="12" Width="327"/>
-                    <Button Content="ОК" Margin="0 10 0 0" Width="54"/>
+                    <Button Content="ОК" Margin="0 10 0 0" Width="54" ToolTip="Зберегти" Command="Save"/>
                 </DockPanel>
             </Grid>
         </Border>
