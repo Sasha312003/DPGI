@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Books">
+                <DataGrid x:Name="BooksDataGrid" AutoGenerateColumns="True"/>
+            </TabItem>
+            <TabItem Header="Publishers">
+                <DataGrid x:Name="PublishersDataGrid" AutoGenerateColumns="True"/>
+            </TabItem>
+            <TabItem Header="Books by Publisher">
+                <StackPanel>
+                    <TextBox x:Name="PublisherIdTextBox" Width="100" Margin="5" />
+                    <Button Content="Load Books" Width="100" Margin="5" Click="LoadBooksByPublisher"/>
+                    <DataGrid x:Name="BooksByPublisherDataGrid" AutoGenerateColumns="True"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Books by Year">
+                <StackPanel>
+                    <TextBox x:Name="YearTextBox" Width="100" Margin="5" />
+                    <Button Content="Load Books" Width="100" Margin="5" Click="LoadBooksByYear"/>
+                    <DataGrid x:Name="BooksByYearDataGrid" AutoGenerateColumns="True"/>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
